@@ -18,7 +18,26 @@ $arr_barang = ['TV' => 4200000, 'KULKAS' => 3100000, 'MESINCUCI' => 3800000];
     <div class="container">
         <h1 class="mb-5">Belanja Online</h1>
         <div class="row">
-            <div class="col-8">
+            <div class="col-sm-12 col-md-4 mb-4">
+                <div class="card">
+                    <div class="card-header">
+                        Daftar Harga
+                    </div>
+                    <div class="card-body">
+                        <?php
+                        foreach ($arr_barang as $barang_key => $barang_val) {
+                        ?>
+                            <p class="card-text"><?= $barang_key . ' : ' . number_format($barang_val, 2, ',', '.'); ?></p>
+                        <?php
+                        }
+                        ?>
+                    </div>
+                    <div class="card-footer">
+                        Harga Dapat Berubah Setiap Saat
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-8">
                 <form method="POST" action="form_belanja.php">
                     <div class="form-group row">
                         <label for="nama" class="col-4 col-form-label">Nama Customer</label>
@@ -56,25 +75,7 @@ $arr_barang = ['TV' => 4200000, 'KULKAS' => 3100000, 'MESINCUCI' => 3800000];
                     </div>
                 </form>
             </div>
-            <div class="col-4">
-                <div class="card">
-                    <div class="card-header">
-                        Daftar Harga
-                    </div>
-                    <div class="card-body">
-                        <?php
-                        foreach ($arr_barang as $barang_key => $barang_val) {
-                        ?>
-                            <p class="card-text"><?= $barang_key . ' : ' . number_format($barang_val, 2, ',', '.'); ?></p>
-                        <?php
-                        }
-                        ?>
-                    </div>
-                    <div class="card-footer">
-                        Harga Dapat Berubah Setiap Saat
-                    </div>
-                </div>
-            </div>
+
 
             <?php
             $proses = $_POST['proses'];
