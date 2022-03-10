@@ -86,6 +86,7 @@ $arr_barang = ['TV' => 4200000, 'KULKAS' => 3100000, 'MESINCUCI' => 3800000];
             $total_belanja = $arr_barang[$barang] * $jumlah_beli;
             $arr_customer = ['Proses' => $proses, 'Nama Customer' => $nama, 'Produk Pilihan' => $barang, 'Jumlah Beli' => $jumlah_beli, 'Total Belanja' => number_format($total_belanja, 2, ',', '.')];
 
+
             if (!empty($proses)) {
                 foreach ($arr_customer as $form_key => $form_value) {
                     if ($form_key === "Proses") continue;
