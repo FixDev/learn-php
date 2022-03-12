@@ -53,3 +53,8 @@ function predikat($grade)
             break;
     }
 }
+
+function countTotalNilai($nilai_uts, $nilai_uas, $nilai_tugas)
+{
+    return ($nilai_uts * (30 / 100)) + ($nilai_uas * (35 / 100)) + ($nilai_tugas * (35 / 100));
+}
