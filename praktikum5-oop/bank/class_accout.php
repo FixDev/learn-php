@@ -31,9 +31,7 @@ class Account
     }
     public function getProperties($key)
     {
-        $arrProperties = ['nomor' => $this->nomor, 'nama' => $this->nama, 'saldo' => $this->saldo];
-
-        return $arrProperties[$key];
+        return $this->{$key};
     }
     public function cetak()
     {
