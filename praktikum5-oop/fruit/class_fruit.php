@@ -20,7 +20,10 @@ class Fruit
         $this->weight = $n;
     }
 }
-$manggo = new Fruit();
-$manggo->set_name('Manggo'); // Ok
-$manggo->set_color('Yellow'); // Error
-$manggo->set_weight('300'); // Error
+
+$manggo = new Fruit('Manggo', 'blue');
+$manggo->set_name('Apel'); // Ok
+
+print("Name of fruit $manggo->name");
+// $manggo->set_color('Yellow'); // Error
+// $manggo->set_weight('300'); // Error

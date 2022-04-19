@@ -27,3 +27,4 @@ $fikri->cetak();
 
 $ijah->cetak();
 $budi->cetak();
+include_once './daftar_account_bank.php';
