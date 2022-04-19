@@ -34,19 +34,37 @@ class BMI
 
     public function getStatusBMI()
     {
-        $massa = $this->getNilaiBMI();
-        if ($massa >= 30.0) {
+        $nilai_bmi = $this->getNilaiBMI();
+        if ($nilai_bmi >= 30.0) {
             $status = "Kegemukan/Obesitas";
-        } elseif ($massa >= 25.0 && $massa <= 29.0) {
+        } elseif ($nilai_bmi >= 25.0 && $nilai_bmi <= 29.9) {
             $status = "Kelebihan berat badan";
-        } elseif ($massa >= 18.5 && $massa <= 24.9) {
+        } elseif ($nilai_bmi >= 18.5 && $nilai_bmi <= 24.9) {
             $status = "Normal/Ideal";
-        } elseif ($massa <= 18.4) {
+        } elseif ($nilai_bmi < 18.5) {
             $status = "Kekurangan berat badan";
         } else {
             $status = "Tidak Diketahui";
         }
 
         return $status;
+    }
+
+    public function getImageByNilaiBMI()
+    {
+        $nilai_bmi = $this->getNilaiBMI();
+        if ($nilai_bmi >= 30.0) {
+            return "obesitas-2";
+        } elseif ($nilai_bmi >= 27.0 && $nilai_bmi <= 29.9) {
+            return "obesitas-1";
+        } elseif ($nilai_bmi >= 24 && $nilai_bmi <= 26.9) {
+            return "gemuk";
+        } elseif ($nilai_bmi >= 18.5 && $nilai_bmi <= 23.9) {
+            return "sedang";
+        } elseif ($nilai_bmi < 18.5) {
+            return "kurus";
+        } else {
+            return "Tidak Diketahui";
+        }
     }
 }

@@ -58,7 +58,7 @@ include_once 'layout/sidebar.php';
                             <div class="form-group row">
                                 <label class="col-sm-2 col-form-label" for="nama">Nama</label>
                                 <div class="col-sm-10">
-                                    <input type="text" name="nama" id="nama" class="form-control" placeholder="Masukan Nama">
+                                    <input type="text" name="nama" required id="nama" class="form-control" placeholder="Masukan Nama">
                                 </div>
                             </div>
 
@@ -67,13 +67,13 @@ include_once 'layout/sidebar.php';
                                 <label class="col-sm-2 col-form-label">Jenis Kelamin</label>
                                 <div class="col-sm-10">
                                     <div class="icheck-primary d-inline mr-1">
-                                        <input type="radio" id="jk" name="jk" value="L">
-                                        <label for="jk">Laki-Laki
+                                        <input type="radio" id="laki_laki" name="jk" value="L">
+                                        <label for="laki_laki">Laki-Laki
                                         </label>
                                     </div>
                                     <div class="icheck-primary d-inline">
-                                        <input type="radio" id="jk" name="jk" value="P">
-                                        <label for="jk">Perempuan
+                                        <input type="radio" id="perempuan" name="jk" value="P">
+                                        <label for="perempuan">Perempuan
                                         </label>
                                     </div>
                                 </div>
@@ -89,7 +89,7 @@ include_once 'layout/sidebar.php';
                             <div class="form-group row">
                                 <label class="col-sm-2 col-form-label" for="tgl_lahir">Tanggal Lahir</label>
                                 <div class="col-sm-10">
-                                    <input placeholder="Selected date" autocomplete="off" type="text" name="tgl_lahir" id="tgl_lahir" class="form-control">
+                                    <input placeholder="Masukan Tanggal Lahir" autocomplete="off" type="text" name="tgl_lahir" id="tgl_lahir" class="form-control">
                                 </div>
                             </div>
 
@@ -104,14 +104,14 @@ include_once 'layout/sidebar.php';
                             <div class="form-group row">
                                 <label class="col-sm-2 col-form-label" for="bb">Berat Badan</label>
                                 <div class="col-sm-10">
-                                    <input type="number" name="bb" id="bb" class="form-control" placeholder="Masukan Berat Badan">
+                                    <input type="number" name="bb" id="bb" required class="form-control" placeholder="Masukan Berat Badan">
                                 </div>
                             </div>
 
                             <div class="form-group row">
                                 <label class="col-sm-2 col-form-label" for="tb">Tinggi Badan</label>
                                 <div class="col-sm-10">
-                                    <input type="number" name="tb" id="tb" class="form-control" placeholder="Masukan Tinggi Badan">
+                                    <input type="number" name="tb" id="tb" required class="form-control" placeholder="Masukan Tinggi Badan">
                                 </div>
                             </div>
 
@@ -129,7 +129,7 @@ include_once 'layout/sidebar.php';
 
             <?php
             require_once './class_bmi_pasien.php';
-            $pasien_hardcode = ['kodePasien' => 'FX-PAS-001', 'tanggal' => '16-04-2022', 'nama' => 'Abdul', 'jk' => 'Laki-laki', 'bb' => 55.7, 'tb' => 181, 'bmi' => 16.8, 'status' => 'Kekurangan Berat Badan'];
+            $pasien_hardcode = ['kodePasien' => 'FX-PAS-001', 'tanggal' => '16-04-2022', 'nama' => 'Abdul', 'jk' => 'Laki-laki', 'bb' => 55.7, 'tb' => 181, 'bmi' => 16.8, 'status' => 'Kekurangan Berat Badan', 'image' => 'kurus'];
 
             // Informasi Pribadi
             $tanggal_check = isset($_REQUEST['tanggal']) ? $_REQUEST['tanggal'] : null;
@@ -149,7 +149,7 @@ include_once 'layout/sidebar.php';
             $kode_pasien = $prefix . $random_kode;
 
             $pasien_object = new BMIPasien($kode_pasien, $nama, $jenis_kelamin, $tmp_lahir, $tgl_lahir, $email, $berat_badan, $tinggi_badan, $tanggal_check);
-            $pasien = ['kodePasien' => $pasien_object->getProperties('pasien')->getProperties('kodePasien'), 'tanggal' => $pasien_object->getProperties('tglChecked'), 'nama' => $pasien_object->getProperties('pasien')->getProperties('namaPasien'), 'jk' => $pasien_object->getProperties('pasien')->getProperties('gender'), 'bb' => $pasien_object->getProperties('bmi')->getProperties('berat'), 'tb' => $pasien_object->getProperties('bmi')->getProperties('tinggi'), 'bmi' => $pasien_object->getProperties('bmi')->getNilaiBMI(), 'status' =>  $pasien_object->getProperties('bmi')->getStatusBMI()];
+            $pasien = ['kodePasien' => $pasien_object->getProperties('pasien')->getProperties('kodePasien'), 'tanggal' => $pasien_object->getProperties('tglChecked'), 'nama' => $pasien_object->getProperties('pasien')->getProperties('namaPasien'), 'jk' => $pasien_object->getProperties('pasien')->getProperties('gender'), 'bb' => $pasien_object->getProperties('bmi')->getProperties('berat'), 'tb' => $pasien_object->getProperties('bmi')->getProperties('tinggi'), 'bmi' => $pasien_object->getProperties('bmi')->getNilaiBMI(), 'status' =>  $pasien_object->getProperties('bmi')->getStatusBMI(), 'image' => $pasien_object->getProperties('bmi')->getImageByNilaiBMI()];
             $all_pasien = [$pasien_hardcode, $pasien];
             if (!empty($nama)) {
             ?>
@@ -212,9 +212,9 @@ include_once 'layout/sidebar.php';
                                 </button>
                             </div>
                             <div class="modal-body">
-                                <?php
-                                echo '<p> Status BMI anda adalah ' . $pasien['status'] . '</p>'
-                                ?>
+                                <h4 class="text-center">BMI Anda Adalah <span class="text-blue text-bold"><?= $pasien['bmi'] ?> </span></h4>
+                                <img class="mx-auto d-block" src="./assets/dist/img/<?= $pasien['image'] ?>.PNG" alt="Image kurus">
+                                <p class="text-caption text-center">BMI Status Anda <span class="text-bold"> <?= $pasien['status'] ?></span></p>
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-success" data-dismiss="modal">Lihat detail!</button>
