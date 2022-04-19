@@ -49,7 +49,6 @@
                           <p>
                               Pratikum
                               <i class="fas fa-angle-left right"></i>
-                              <span class="badge badge-info right">5</span>
                           </p>
                       </a>
                       <ul class="nav nav-treeview">
@@ -199,6 +198,36 @@
                                       <a href="../../praktikum-pemweb/praktikum5-oop/fruit-inherit/class_fruit.php" target="blank" class="nav-link">
                                           <i class="far fa-circle nav-icon"></i>
                                           <p>Fruit Inherite</p>
+                                      </a>
+                                  </li>
+                              </ul>
+                          </li>
+
+                          <li class="nav-item">
+                              <a href="javascript:void(0)" class="nav-link">
+                                  <i class="far fa-circle nav-icon"></i>
+                                  <p>
+                                      <p>Pratikum 6</p>
+                                      <i class="fas fa-angle-left right"></i>
+                                  </p>
+                              </a>
+                              <ul class="nav nav-treeview" style="display: none;">
+                                  <li class="nav-item">
+                                      <a href="http://localhost/praktikum-pemweb/praktikum6-ci/dosen/index" target="blank" class="nav-link">
+                                          <i class="far fa-circle nav-icon"></i>
+                                          <p>Dosen</p>
+                                      </a>
+                                  </li>
+                                  <li class="nav-item">
+                                      <a href="http://localhost/praktikum-pemweb/praktikum6-ci/mahasiswa/index" target="blank" class="nav-link">
+                                          <i class="far fa-circle nav-icon"></i>
+                                          <p>Mahasiswa</p>
+                                      </a>
+                                  </li>
+                                  <li class="nav-item">
+                                      <a href="http://localhost/praktikum-pemweb/praktikum6-ci/matakuliah/index" target="blank" class="nav-link">
+                                          <i class="far fa-circle nav-icon"></i>
+                                          <p>Mata Kuliah</p>
                                       </a>
                                   </li>
                               </ul>
