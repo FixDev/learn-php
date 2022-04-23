@@ -26,7 +26,7 @@
                   <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
                   <li class="nav-item">
-                      <a href="../../praktikum-pemweb/index.php" class="nav-link">
+                      <a href="/pemweb2_muhammadfikri/index.php" class="nav-link">
                           <i class="nav-icon fas fa-tachometer-alt"></i>
                           <p>
                               Dashboard
@@ -35,7 +35,7 @@
 
                   </li>
                   <li class="nav-item">
-                      <a href="../../praktikum-pemweb/project-1/index.php" class="nav-link">
+                      <a href="/pemweb2_muhammadfikri/project-1/index.php" class="nav-link">
                           <i class="nav-icon fas fa-th"></i>
                           <p>
                               Project 1
@@ -53,7 +53,7 @@
                       </a>
                       <ul class="nav nav-treeview">
                           <li class="nav-item">
-                              <a href="../../praktikum-pemweb/praktikum1/index.php" target="blank" class="nav-link">
+                              <a href="/pemweb2_muhammadfikri/praktikum1/index.php" target="blank" class="nav-link">
                                   <i class="far fa-circle nav-icon"></i>
                                   <p>Pratikum 1</p>
                               </a>
@@ -69,13 +69,13 @@
                               </a>
                               <ul class="nav nav-treeview" style="display: none;">
                                   <li class="nav-item">
-                                      <a href="../../praktikum-pemweb/praktikum2/form_belanja.php" target="blank" class="nav-link">
+                                      <a href="/pemweb2_muhammadfikri/praktikum2/form_belanja.php" target="blank" class="nav-link">
                                           <i class="far fa-circle nav-icon"></i>
                                           <p>Form Belanja</p>
                                       </a>
                                   </li>
                                   <li class="nav-item">
-                                      <a href="../../praktikum-pemweb/praktikum2/form_nilai.php" target="blank" class="nav-link">
+                                      <a href="/pemweb2_muhammadfikri/praktikum2/form_nilai.php" target="blank" class="nav-link">
                                           <i class="far fa-circle nav-icon"></i>
                                           <p>Form Nilai Siswa</p>
                                       </a>
@@ -93,25 +93,25 @@
                               </a>
                               <ul class="nav nav-treeview" style="display: none;">
                                   <li class="nav-item">
-                                      <a href="../../praktikum-pemweb/praktikum3/web_dinamis/template.html" target="blank" class="nav-link">
+                                      <a href="/pemweb2_muhammadfikri/praktikum3/web_dinamis/template.html" target="blank" class="nav-link">
                                           <i class="far fa-circle nav-icon"></i>
                                           <p>Web Dinamis 1</p>
                                       </a>
                                   </li>
                                   <li class="nav-item">
-                                      <a href="../../praktikum-pemweb/praktikum3/web_dinamis/home.php" target="blank" class="nav-link">
+                                      <a href="/pemweb2_muhammadfikri/praktikum3/web_dinamis/home.php" target="blank" class="nav-link">
                                           <i class="far fa-circle nav-icon"></i>
                                           <p>Web Dinamis 2</p>
                                       </a>
                                   </li>
                                   <li class="nav-item">
-                                      <a href="../../praktikum-pemweb/praktikum3/web_dinamis_template/index.php" target="blank" class="nav-link">
+                                      <a href="/pemweb2_muhammadfikri/praktikum3/web_dinamis_template/index.php" target="blank" class="nav-link">
                                           <i class="far fa-circle nav-icon"></i>
                                           <p>Web Dinamis 3</p>
                                       </a>
                                   </li>
                                   <li class="nav-item">
-                                      <a href="../../praktikum-pemweb/praktikum3/form_nilai.php" target="blank" class="nav-link">
+                                      <a href="/pemweb2_muhammadfikri/praktikum3/form_nilai.php" target="blank" class="nav-link">
                                           <i class="far fa-circle nav-icon"></i>
                                           <p>Form Nilai Siswa (Use Libfungsi)</p>
                                       </a>
@@ -129,13 +129,13 @@
                               </a>
                               <ul class="nav nav-treeview" style="display: none;">
                                   <li class="nav-item">
-                                      <a href="../../praktikum-pemweb/praktikum4-oop/lingkaran/data_lingkaran.php" target="blank" class="nav-link">
+                                      <a href="/pemweb2_muhammadfikri/praktikum4-oop/lingkaran/data_lingkaran.php" target="blank" class="nav-link">
                                           <i class="far fa-circle nav-icon"></i>
                                           <p>Lingkaran</p>
                                       </a>
                                   </li>
                                   <li class="nav-item">
-                                      <a href="../../praktikum-pemweb/praktikum4-oop/persegi-panjang/index.php" target="blank" class="nav-link">
+                                      <a href="/pemweb2_muhammadfikri/praktikum4-oop/persegi-panjang/index.php" target="blank" class="nav-link">
                                           <i class="far fa-circle nav-icon"></i>
                                           <p>Persegi Panjang</p>
                                       </a>
@@ -150,13 +150,13 @@
                                       </a>
                                       <ul class="nav nav-treeview" style="display: none;">
                                           <li class="nav-item">
-                                              <a href="../../praktikum-pemweb/praktikum4-oop/mahasiswa/list-mahasiswa/index.php" target="blank" class="nav-link">
+                                              <a href="/pemweb2_muhammadfikri/praktikum4-oop/mahasiswa/list-mahasiswa/index.php" target="blank" class="nav-link">
                                                   <i class="far fa-circle nav-icon"></i>
                                                   <p>List Mahasiswa</p>
                                               </a>
                                           </li>
                                           <li class="nav-item">
-                                              <a href="../../praktikum-pemweb/praktikum4-oop/mahasiswa/nilai-mahasiswa/index.php" target="blank" class="nav-link">
+                                              <a href="/pemweb2_muhammadfikri/praktikum4-oop/mahasiswa/nilai-mahasiswa/index.php" target="blank" class="nav-link">
                                                   <i class="far fa-circle nav-icon"></i>
                                                   <p>Nilai Mahasiswa</p>
                                               </a>
@@ -177,25 +177,25 @@
                               </a>
                               <ul class="nav nav-treeview" style="display: none;">
                                   <li class="nav-item">
-                                      <a href="../../praktikum-pemweb/praktikum5-oop/bank/index.php" target="blank" class="nav-link">
+                                      <a href="/pemweb2_muhammadfikri/praktikum5-oop/bank/index.php" target="blank" class="nav-link">
                                           <i class="far fa-circle nav-icon"></i>
                                           <p>Bank</p>
                                       </a>
                                   </li>
                                   <li class="nav-item">
-                                      <a href="../../praktikum-pemweb/praktikum5-oop/dispanser/class_dispanser.php" target="blank" class="nav-link">
+                                      <a href="/pemweb2_muhammadfikri/praktikum5-oop/dispanser/class_dispanser.php" target="blank" class="nav-link">
                                           <i class="far fa-circle nav-icon"></i>
                                           <p>Dispanser</p>
                                       </a>
                                   </li>
                                   <li class="nav-item">
-                                      <a href="../../praktikum-pemweb/praktikum5-oop/fruit/class_fruit.php" target="blank" class="nav-link">
+                                      <a href="/pemweb2_muhammadfikri/praktikum5-oop/fruit/class_fruit.php" target="blank" class="nav-link">
                                           <i class="far fa-circle nav-icon"></i>
                                           <p>Fruit</p>
                                       </a>
                                   </li>
                                   <li class="nav-item">
-                                      <a href="../../praktikum-pemweb/praktikum5-oop/fruit-inherit/class_fruit.php" target="blank" class="nav-link">
+                                      <a href="/pemweb2_muhammadfikri/praktikum5-oop/fruit-inherit/class_fruit.php" target="blank" class="nav-link">
                                           <i class="far fa-circle nav-icon"></i>
                                           <p>Fruit Inherite</p>
                                       </a>
