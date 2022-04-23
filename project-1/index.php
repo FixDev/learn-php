@@ -162,40 +162,41 @@ include_once 'layout/sidebar.php';
                         <!-- form start -->
 
                         <div class="card-body">
-                            <table class="table table-bordered">
-                                <thead>
-                                    <tr>
-                                        <th>No</th>
-                                        <th>Tgl</th>
-                                        <th>Kode</th>
-                                        <th>Nama</th>
-                                        <th>Gender</th>
-                                        <th>Berat</th>
-                                        <th>Tinggi</th>
-                                        <th>BMI</th>
-                                        <th>Hasil</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <?php
-                                    $nomor = 1;
-                                    foreach ($all_pasien as $pasien) {
-                                        echo '<tr>';
-                                        echo '<td>' . $nomor++ . '</td>';
-                                        echo '<td>' . $pasien['tanggal'] . '</td>';
-                                        echo '<td>' . $pasien['kodePasien'] . '</td>';
-                                        echo '<td>' . $pasien['nama'] . '</td>';
-                                        echo '<td>' . $pasien['jk'] . '</td>';
-                                        echo '<td>' . $pasien['bb'] . '</td>';
-                                        echo '<td>' . $pasien['tb'] . '</td>';
-                                        echo '<td>' . $pasien['bmi'] . '</td>';
-                                        echo '<td>' . $pasien['status']  . '</td>';
-                                        echo '</tr>';
-                                    }
-                                    ?>
-                                </tbody>
-                            </table>
-
+                            <div class="table-responsive">
+                                <table class="table table-bordered">
+                                    <thead>
+                                        <tr>
+                                            <th>No</th>
+                                            <th>Tgl</th>
+                                            <th>Kode</th>
+                                            <th>Nama</th>
+                                            <th>Gender</th>
+                                            <th>Berat</th>
+                                            <th>Tinggi</th>
+                                            <th>BMI</th>
+                                            <th>Hasil</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <?php
+                                        $nomor = 1;
+                                        foreach ($all_pasien as $pasien) {
+                                            echo '<tr>';
+                                            echo '<td>' . $nomor++ . '</td>';
+                                            echo '<td>' . $pasien['tanggal'] . '</td>';
+                                            echo '<td>' . $pasien['kodePasien'] . '</td>';
+                                            echo '<td>' . $pasien['nama'] . '</td>';
+                                            echo '<td>' . $pasien['jk'] . '</td>';
+                                            echo '<td>' . $pasien['bb'] . '</td>';
+                                            echo '<td>' . $pasien['tb'] . '</td>';
+                                            echo '<td>' . $pasien['bmi'] . '</td>';
+                                            echo '<td>' . $pasien['status']  . '</td>';
+                                            echo '</tr>';
+                                        }
+                                        ?>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
 
                     </div>
