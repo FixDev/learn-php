@@ -122,6 +122,7 @@
                 </div>
                 <div class="form-group row">
                     <div class="offset-4 col-8">
+                        <a type="button" href="index" class="btn btn-secondary">Kembali</a>
                         <button name="submit" type="submit" class="btn btn-primary">Submit</button>
                     </div>
                 </div>

@@ -18,6 +18,7 @@
     <section class="content">
         <!-- Default box -->
         <div class="card">
+
             <div class="card-header">
                 <h3 class="card-title">Mahasiswa yang tersedia</h3>
 
@@ -32,7 +33,9 @@
             </div>
             <div class="card-body">
                 <table class="table table-striped">
-
+                    <a href="create" type="button" class="btn btn-primary btn-md">
+                        <i class="fas fa-add">Tambah</i>
+                    </a>
                     <thead>
                         <tr>
                             <th>#</th>
