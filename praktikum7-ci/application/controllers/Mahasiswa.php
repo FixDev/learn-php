@@ -10,6 +10,8 @@ class Mahasiswa extends CI_Controller
 
         $data['list_prodi'] = $list_mahasiswa;
 
+        $this->load->view('layouts/header');
         $this->load->view('mahasiswa/index', $data);
+        $this->load->view('layouts/footer');
     }
 }

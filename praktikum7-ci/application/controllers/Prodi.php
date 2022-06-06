@@ -10,6 +10,9 @@ class Prodi extends CI_Controller
 
         $data['list_prodi'] = $list_prodi;
 
+        $this->load->view('layouts/header');
+        $this->load->view('layouts/sidebar');
         $this->load->view('prodi/index', $data);
+        $this->load->view('layouts/footer');
     }
 }
