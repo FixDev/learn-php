@@ -1,11 +1,26 @@
 <?php
-class Dosen_model extends CI_Model
+class Dosen_Model extends CI_Model
 {
-    public $id;
-    public $nama;
-    public $nidn;
-    public $gender;
-    public $tmp_lahir;
-    public $tgl_lahir;
-    public $pendidikan;
+    private $table_name = 'dosen';
+
+    public function getAllData()
+    {
+        return $this->db->get($this->table_name)->result();
+    }
+
+    public function findById($id)
+    {
+        $this->db->where('nim', $id);
+        return $this->db->get($this->table_name)->row();
+    }
+
+    public function save($data)
+    {
+    }
+    public function update($data)
+    {
+    }
+    public function delete($data)
+    {
+    }
 }

@@ -42,6 +42,9 @@
                 Indeks Prestasi : <?= $mahasiswa->ipk ?> <br />
                 Predikat : <?= $mahasiswa->predikat() ?> <br />
             </div>
+            <a href="<?= base_url() ?>mahasiswa" type="button" class="btn btn-secondary btn-md">
+                Kembali
+            </a>
             <!-- /.card-body -->
             <div class="card-footer">
                 Footer

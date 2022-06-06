@@ -32,12 +32,16 @@
             </div>
             <div class="card-body">
                 <table class="table table-striped">
+                    <a href="prodi/create" type="button" class="btn btn-primary btn-md">
+                        <i class="fas fa-plus m-1"></i>Tambah
+                    </a>
                     <thead>
                         <tr>
                             <th>No</th>
                             <th>Kode</th>
                             <th>Nama Prodi</th>
                             <th>Ketua Prodi</th>
+                            <th>Action</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -50,6 +54,9 @@
                                 <td><?= $prodi->kode ?></td>
                                 <td><?= $prodi->nama ?></td>
                                 <td><?= $prodi->kaprodi ?></td>
+                                <td> <a href="view" type="button" class="btn btn-primary btn-sm">
+                                        <i class="fas fa-eye"></i> View
+                                    </a></td>
                             </tr>
                         <?php
                             $nomor++;

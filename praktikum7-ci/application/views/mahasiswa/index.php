@@ -33,7 +33,7 @@
             </div>
             <div class="card-body">
                 <table class="table table-striped">
-                    <a href="create" type="button" class="btn btn-primary btn-md">
+                    <a href="mahasiswa/create" type="button" class="btn btn-primary btn-md">
                         <i class="fas fa-add">Tambah</i>
                     </a>
                     <thead>
