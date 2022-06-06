@@ -1,29 +1,17 @@
 <?php
-
-use LDAP\Result;
-
 class Mahasiswa_model extends CI_Model
 {
-    private $table_name = 'mahasiswa';
-
-    public function getAllData()
+    public $id;
+    public $nama;
+    public $nim;
+    public $gender;
+    public $tmp_lahir;
+    public $tgl_lahir;
+    public $prodi;
+    public $ipk;
+    public function predikat()
     {
-        return $this->db->get($this->table_name)->result();
-    }
-
-    public function findById($id)
-    {
-        $this->db->where('nim', $id);
-        return $this->db->get($this->table_name)->row();
-    }
-
-    public function save($data)
-    {
-    }
-    public function update($data)
-    {
-    }
-    public function delete($data)
-    {
+        $predikat = ($this->ipk >= 3.75) ? "Cumlaude" : "Baik";
+        return $predikat;
     }
 }
