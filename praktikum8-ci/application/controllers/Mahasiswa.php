@@ -14,6 +14,7 @@ class Mahasiswa extends CI_Controller
         $this->load->view('layouts/sidebar');
         $this->load->view('mahasiswa/index', $data);
         $this->load->view('layouts/footer');
+        return;
     }
     public function view()
     {
@@ -28,6 +29,7 @@ class Mahasiswa extends CI_Controller
         $this->load->view('layouts/sidebar');
         $this->load->view('mahasiswa/view', $data);
         $this->load->view('layouts/footer');
+        return;
     }
     public function create()
     {
@@ -35,8 +37,34 @@ class Mahasiswa extends CI_Controller
 
         $this->load->view('layouts/header');
         $this->load->view('layouts/sidebar');
-        $this->load->view('mahasiswa/create', $data);
+        $this->load->view('mahasiswa/baseform', $data);
         $this->load->view('layouts/footer');
+        return;
+    }
+    public function update()
+    {
+        $nim = $this->input->get('id');
+        $data['judul'] = 'Form Edit Mahasiswa';
+
+        $this->load->model('mahasiswa_model', 'mhs');
+        $queried_mhs = $this->mhs->findById($nim);
+
+        $data['mhs'] = $queried_mhs;
+
+        $this->load->view('layouts/header');
+        $this->load->view('layouts/sidebar');
+        $this->load->view('mahasiswa/baseform', $data);
+        $this->load->view('layouts/footer');
+    }
+    public function delete()
+    {
+        $nim = $this->input->get('id');
+
+        $this->load->model('mahasiswa_model', 'mhs');
+        $this->mhs->delete([$nim]);
+
+        redirect(base_url() . 'mahasiswa', 'refresh');
+        return;
     }
     public function save()
     {
@@ -49,23 +77,33 @@ class Mahasiswa extends CI_Controller
         $_tgl_lahir = $this->input->post('tgl_lahir');
         $_prodi_kode = $this->input->post('prodi');
         $_ipk = $this->input->post('ipk');
+        $_isEdit = $this->input->post('isEdit');
 
-        $this->mhs->save([
-            $_nim,
-            $_nama,
-            $_gender,
-            $_tmp_lahir,
-            $_tgl_lahir,
-            $_prodi_kode,
-            $_ipk
-        ]);
+        if (isset($_isEdit) && $_isEdit) {
+            $this->mhs->update([
+                $_nim,
+                $_nama,
+                $_gender,
+                $_tmp_lahir,
+                $_tgl_lahir,
+                $_prodi_kode,
+                $_ipk,
+                $_nim,
+            ]);
+        } else {
+            $this->mhs->save([
+                $_nim,
+                $_nama,
+                $_gender,
+                $_tmp_lahir,
+                $_tgl_lahir,
+                $_prodi_kode,
+                $_ipk
+            ]);
+        }
 
-        $queried_mhs = $this->mhs->findById($_nim);
 
-        $data['mhs'] = $queried_mhs;
-        $this->load->view('layouts/header');
-        $this->load->view('layouts/sidebar');
-        $this->load->view('mahasiswa/view', $data);
-        $this->load->view('layouts/footer');
+        redirect(base_url() . 'mahasiswa/view?id=' . $_nim, 'refresh');
+        return;
     }
 }

@@ -45,7 +45,7 @@
                             <th>Tanggal Lahir</th>
                             <th>Prodi</th>
                             <th>Indeks Prestasi</th>
-                            <th>Action</th>
+                            <th class="text-center">Action</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -62,8 +62,12 @@
                                 <td><?= $mhs->tgl_lahir ?></td>
                                 <td><?= $mhs->prodi_kode ?></td>
                                 <td><?= $mhs->ipk ?></td>
-                                <td> <a href="mahasiswa/view?id=<?= $mhs->nim ?>" type="button" class="btn btn-primary btn-sm">
+                                <td> <a href="mahasiswa/view?id=<?= $mhs->nim ?>" type="button" class="btn btn-primary btn-xs">
                                         <i class="fas fa-eye"></i> View
+                                    </a> &nbsp;<a href="mahasiswa/update?id=<?= $mhs->nim ?>" type="button" class="btn btn-warning btn-xs">
+                                        <i class="fas fa-pen"></i> Update
+                                    </a> &nbsp;<a href="mahasiswa/delete?id=<?= $mhs->nim ?>" type="button" class="btn btn-danger btn-xs">
+                                        <i class="fas fa-trash"></i> Delete
                                     </a></td>
                             </tr>
                         <?php

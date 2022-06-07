@@ -31,7 +31,7 @@
                 </div>
             </div>
             <div class="card-body">
-                <?php echo form_open('mahasiswa/save') ?>
+                <?php echo form_open('mahasiswa/save', '', ['isEdit' => str_contains($judul, 'Edit')]) ?>
                 <div class="form-group row">
                     <label for="nim" class="col-4 col-form-label">NIM</label>
                     <div class="col-8">
@@ -41,7 +41,7 @@
                                     <i class="fa fa-address-card"></i>
                                 </div>
                             </div>
-                            <input id="nim" name="nim" type="text" class="form-control">
+                            <input id="nim" value="<?= isset($mhs->nim) ? $mhs->nim : '' ?>" name="nim" type="text" class="form-control">
                         </div>
                     </div>
                 </div>
@@ -54,7 +54,7 @@
                                     <i class="fa fa-address-book"></i>
                                 </div>
                             </div>
-                            <input id="name" name="name" type="text" class="form-control">
+                            <input value="<?= isset($mhs->nama) ? $mhs->nama : '' ?>" id="name" name="name" type="text" class="form-control">
                         </div>
                     </div>
                 </div>
@@ -62,11 +62,11 @@
                     <label class="col-4">Jenis Kelamin</label>
                     <div class="col-8">
                         <div class="custom-control custom-radio custom-control-inline">
-                            <input name="jk" id="jk_0" type="radio" class="custom-control-input" value="L">
+                            <input name="jk" id="jk_0" type="radio" class="custom-control-input" value="L" <?= isset($mhs->gender) && $mhs->gender == 'L' ? 'checked' : '' ?>>
                             <label for="jk_0" class="custom-control-label">Laki-laki</label>
                         </div>
                         <div class="custom-control custom-radio custom-control-inline">
-                            <input name="jk" id="jk_1" type="radio" class="custom-control-input" value="P">
+                            <input name="jk" id="jk_1" type="radio" class="custom-control-input" value="P" <?= isset($mhs->gender) && $mhs->gender == 'P' ? 'checked' : '' ?>>
                             <label for="jk_1" class="custom-control-label">Perempuan</label>
                         </div>
                     </div>
@@ -80,7 +80,7 @@
                                     <i class="fa fa-anchor"></i>
                                 </div>
                             </div>
-                            <input id="tmp_lahir" name="tmp_lahir" type="text" class="form-control">
+                            <input value="<?= isset($mhs->tmp_lahir) ? $mhs->tmp_lahir : '' ?>" id="tmp_lahir" name="tmp_lahir" type="text" class="form-control">
                         </div>
                     </div>
                 </div>
@@ -93,14 +93,14 @@
                                     <i class="fa fa-calendar"></i>
                                 </div>
                             </div>
-                            <input id="tgl_lahir" name="tgl_lahir" type="text" class="form-control">
+                            <input value="<?= isset($mhs->tgl_lahir) ? $mhs->tgl_lahir : '' ?>" id="tgl_lahir" name="tgl_lahir" type="text" class="form-control">
                         </div>
                     </div>
                 </div>
                 <div class="form-group row">
                     <label for="prodi" class="col-4 col-form-label">Program Studi</label>
                     <div class="col-8">
-                        <select id="prodi" name="prodi" class="custom-select">
+                        <select id="prodi" name="prodi" value="<?= isset($mhs->prodi_kode) ? $mhs->prodi_kode : '' ?>" class="custom-select">
                             <option value="SI">Sistim Informasi</option>
                             <option value="TI">Teknik Informatika</option>
                             <option value="BD">Bisnis Digital</option>
@@ -116,10 +116,11 @@
                                     <i class="fa fa-adjust"></i>
                                 </div>
                             </div>
-                            <input id="ipk" name="ipk" type="text" class="form-control">
+                            <input id="ipk" name="ipk" value="<?= isset($mhs->ipk) ? $mhs->ipk : '' ?>" type="text" class="form-control">
                         </div>
                     </div>
                 </div>
+
                 <div class="form-group row">
                     <div class="offset-4 col-8">
                         <a href="<?= base_url() ?>mahasiswa" type="button" class="btn btn-secondary">
