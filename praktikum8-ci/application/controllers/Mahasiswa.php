@@ -5,6 +5,11 @@ class Mahasiswa extends CI_Controller
 {
     public function index()
     {
+        if (!$this->session->has_userdata('username')) {
+            redirect(base_url() . 'login', 'refresh');
+            return;
+        }
+
         $this->load->model('mahasiswa_model', 'mhs');
         $list_mahasiswa = $this->mhs->getAllData();
 

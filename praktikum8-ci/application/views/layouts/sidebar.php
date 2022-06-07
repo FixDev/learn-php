@@ -14,7 +14,7 @@
                 <img src="<?php echo base_url('dist/img/user2-160x160.jpg') ?>" class="img-circle elevation-2" alt="User Image">
             </div>
             <div class="info">
-                <a href="#" class="d-block">Alexander Pierce</a>
+                <a href="#" class="d-block"><?= $this->session->userdata('username') ?> - <?= $this->session->userdata('role') ?></a>
             </div>
         </div>
 
@@ -35,33 +35,59 @@
             <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
                 <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
-                <li class="nav-item">
-                    <a href="<?= base_url() ?>mahasiswa" class="nav-link">
-                        <i class="nav-icon fas fa-user"></i>
-                        <p>
-                            Mahasiswa
-                            <span class="right badge badge-danger">New</span>
-                        </p>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="<?= base_url() ?>dosen" class="nav-link">
-                        <i class="nav-icon fas fa-user"></i>
-                        <p>
-                            Dosen
-                            <span class="right badge badge-danger">New</span>
-                        </p>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="<?= base_url() ?>prodi" class="nav-link">
-                        <i class="nav-icon fas fa-book"></i>
-                        <p>
-                            Prodi
-                            <span class="right badge badge-danger">New</span>
-                        </p>
-                    </a>
-                </li>
+                <?php
+                if ($this->session->userdata('role') === 'MAHASISWA') {
+                ?>
+                    <li class="nav-item">
+                        <a href="<?= base_url() ?>mahasiswa" class="nav-link">
+                            <i class="nav-icon fas fa-user"></i>
+                            <p>
+                                Profile
+                                <span class="right badge badge-danger">New</span>
+                            </p>
+                        </a>
+                    </li>
+                <?php } ?>
+                <?php
+                if ($this->session->userdata('role') === 'ADMIN') {
+                ?>
+                    <li class="nav-item">
+                        <a href="<?= base_url() ?>mahasiswa" class="nav-link">
+                            <i class="nav-icon fas fa-user"></i>
+                            <p>
+                                Profile
+                                <span class="right badge badge-danger">New</span>
+                            </p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="<?= base_url() ?>mahasiswa" class="nav-link">
+                            <i class="nav-icon fas fa-user"></i>
+                            <p>
+                                Mahasiswa
+                                <span class="right badge badge-danger">New</span>
+                            </p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="<?= base_url() ?>dosen" class="nav-link">
+                            <i class="nav-icon fas fa-user"></i>
+                            <p>
+                                Dosen
+                                <span class="right badge badge-danger">New</span>
+                            </p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="<?= base_url() ?>prodi" class="nav-link">
+                            <i class="nav-icon fas fa-book"></i>
+                            <p>
+                                Prodi
+                                <span class="right badge badge-danger">New</span>
+                            </p>
+                        </a>
+                    </li>
+                <?php } ?>
             </ul>
         </nav>
         <!-- /.sidebar-menu -->
