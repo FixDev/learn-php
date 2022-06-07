@@ -45,7 +45,7 @@
                             <th>Tanggal Lahir</th>
                             <th>Prodi</th>
                             <th>Pendidikan Akhir</th>
-                            <th>Action</th>
+                            <th class="text-center">Action</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -62,8 +62,12 @@
                                 <td><?= $dsn->tgl_lahir ?></td>
                                 <td><?= $dsn->prodi_kode ?></td>
                                 <td><?= $dsn->pendidikan_akhir ?></td>
-                                <td> <a href="view" type="button" class="btn btn-primary btn-sm">
+                                <td> <a href="dosen/view?id=<?= $dsn->nidn ?>" type="button" class="btn btn-primary btn-xs">
                                         <i class="fas fa-eye"></i> View
+                                    </a> &nbsp;<a href="dosen/update?id=<?= $dsn->nidn ?>" type="button" class="btn btn-warning btn-xs">
+                                        <i class="fas fa-pen"></i> Update
+                                    </a> &nbsp;<a href="dosen/delete?id=<?= $dsn->nidn ?>" type="button" class="btn btn-danger btn-xs">
+                                        <i class="fas fa-trash"></i> Delete
                                     </a></td>
                             </tr>
                         <?php

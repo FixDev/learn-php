@@ -41,7 +41,7 @@
                             <th>Kode</th>
                             <th>Nama Prodi</th>
                             <th>Ketua Prodi</th>
-                            <th>Action</th>
+                            <th class="text-center">Action</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -54,8 +54,12 @@
                                 <td><?= $prodi->kode ?></td>
                                 <td><?= $prodi->nama ?></td>
                                 <td><?= $prodi->kaprodi ?></td>
-                                <td> <a href="view" type="button" class="btn btn-primary btn-sm">
+                                <td class="text-center"> <a href="prodi/view?id=<?= $prodi->kode ?>" type="button" class="btn btn-primary btn-xs">
                                         <i class="fas fa-eye"></i> View
+                                    </a> &nbsp;<a href="prodi/update?id=<?= $prodi->kode ?>" type="button" class="btn btn-warning btn-xs">
+                                        <i class="fas fa-pen"></i> Update
+                                    </a> &nbsp;<a href="prodi/delete?id=<?= $prodi->kode ?>" type="button" class="btn btn-danger btn-xs">
+                                        <i class="fas fa-trash"></i> Delete
                                     </a></td>
                             </tr>
                         <?php
